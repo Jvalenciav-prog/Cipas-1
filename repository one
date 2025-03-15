@@ -1,0 +1,22 @@
+def calcular_promedio_estudiantes():
+    """
+    Calcula y muestra el promedio de calificaciones de 3 estudiantes.
+    """
+
+    estudiantes = {}  # Diccionario para almacenar nombres y calificaciones
+
+    # Bucle para ingresar datos de cada estudiante
+    for i in range(3):
+        nombre = input(f"Ingrese el nombre del estudiante {i + 1}: ")
+        calificacion = float(input(f"Ingrese la calificación de {nombre}: "))
+        estudiantes[nombre] = calificacion
+
+    # Calcular el promedio de las calificaciones
+    total_calificaciones = sum(estudiantes.values())
+    promedio = total_calificaciones / len(estudiantes)
+
+    # Mostrar el promedio
+    print(f"\nEl promedio de las calificaciones es: {promedio:.2f}")
+
+# Llamar a la función para ejecutar el programa
+calcular_promedio_estudiantes()
